@@ -5,7 +5,7 @@ import Todo from "./Todo"
 import { BarChart, LineChart } from "react-native-chart-kit";
 import moment from 'moment';
 
-export default function HomePage() {
+export default function HomePage({ navigation }) {
 
   // const [input, setInput] = useState("")
   const [amount, setAmount] = useState(0)
@@ -113,7 +113,7 @@ export default function HomePage() {
         <Text>Hello world</Text>
       </View>
       <View>
-
+       <Button title="Login" onPress={() => navigation.navigate("Login")} />
         <Text>Bezier Line Chart</Text>
         <LineChart
           data={{
